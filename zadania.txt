@@ -1,0 +1,30 @@
+1. 
+Napisz kod (nie musi być OOP), który z podanej tablicy stworzy menu.
+Założenia:
+  - Pamiętaj o posortowaniu tablicy (sortuj po indeksie "id").
+  - Funkcja musi zwrócić kod HTML z listą UL.
+  - Plik menu.php zawiera tablice, z której funkcja musi stworzyć menu.
+  - Kod musi być na tle uniwersalny, by poradził sobie z wiekszą ilością
+    zagłębień bez konieczności jego modyfikacji.
+
+2.
+Przygotuj zestaw klas do obsługi sesji. Jeśli potrafisz wyobrazić sobie całą strukturę,
+nie musisz implementować ciał metod w całości - oceniana tutaj będzie implementacja
+obiektów, to jak je wykorzystasz, stworzysz.
+Jeśli potrzebne jest wyjaśnienie, co robi ta metoda, lub którą
+inną metodę wywołuje i w jakim celu - napisz to w komentarzu.
+Założenia:
+  - Zaimplementuj metody przechowywania sesji w:
+    - Bazie danych
+    - Plikach
+  - Musi być możliwość skonfigurowania Storage sesji w pliku konfiguracyjnym
+  - Musi być możliwość łatwego dodania następnego SessionStorage
+  - Sesja ma być obiektem konkretyzowanym zawsze z jednej klasy
+    (łatwość zmiany SessionStorage, jeśli zajdzie taka potrzeba w aplikacji)
+  - Ta klasa (główna) w jednej ze swoich metod decyduje, którą implementację Storage ma używać
+W skrócie, musi to działać tak, że w aplikacji tworzymy obiekt klasy Session, on pobiera
+ustawienia z pliku konfiguracyjnego i w zależności od tego, czy ustawiony jest Storage
+w bazie czy w plikach - używa takiej klasy Storage. Zmiana Storage odbywać się ma tylko
+w pliku konfiguracyjnym - bez potrzeby zmiany kodu w samych klasach. Oceniony tu zostanie
+kod OOP oraz pomysł na rozwiązanie problemu zmiany SessionStorage, podczas użycia zawsze
+tej samej klasy Session.
